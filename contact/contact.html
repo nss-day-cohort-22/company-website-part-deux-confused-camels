@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="contact.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- Message form -->
+    <form id="test">
+        <input type="radio" name="messageType" value="comment" checked>Leave Commen<br>
+        <input type="radio" name="messageType" value="email">Send Email<br>
+        <input type="text" name="name" id="name" value="Full Name">
+        <input type="text" name="name" id="email" value="Email">
+        <textarea>Some text...</textarea>
+    </form>
+    <button onclick="getData();myFunction()">Click Me</button>
+    <button onclick="modal()">CHECK EMAIL</button>
+    
+    <!-- Comment output -->
+    <p id="testOutput"></p>
+    
+    <!-- Message toaster -->
+    <div id="snackbar">Thank you for your message..</div>
+    
+    <!-- Modal window for email -->
+    <div id="modal">
+        <div id="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <p id="modalTitle"></p>
+            </div>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    
+    <script src="modal.js"></script>
+    <script src="contactController.js"></script>
+</body>
+</html>
