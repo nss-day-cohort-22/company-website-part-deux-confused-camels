@@ -10,22 +10,22 @@ h1 {
     text-align: center;
 }
 
+#employee-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .employee-image {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
+    padding: 10px;
 }
 
 .employee {
-    display: -webkit-flex;
-    display: flex;
     margin: 30px;
-    justify-content: center;
-}
-
-.employee-name-title {
-    align-self: center;
-    padding-left: 10%;
-    width: 40%
+    text-align: center;
+    width: 150px;
 }
