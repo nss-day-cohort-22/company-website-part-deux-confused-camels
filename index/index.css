@@ -4,18 +4,23 @@
     position:relative;
     display:inline-block;
     text-align:center;
-    border:1px solid red;
+    border:5px solid #000000;
+    margin: 50px;
 }
 
-button {
+.button {
+    font-size: 26px;
     position:absolute;
-    bottom:10px;
-    right:10px;
-    width:100px;
-    height:30px;
+    bottom:300px;
+    right:530px;
+    width:300px;
+    height:50px;
 }
 
+.bodyWrap {
+    width: 100%;
 
+}
 
 
     
