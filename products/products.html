@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../main-styles.css">   
+    <link rel="stylesheet" href="../main-styles.css"> 
+    <link rel="stylesheet" href="products-styles.css">  
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top mb-3">
@@ -20,11 +21,20 @@
             </div>
     </nav>
 
-    <!--------------------Code away, Camels.  Just place the id for you javascript HTML push in the main nav below ---------------------->
-    <main  class="container pb-5">
+    <main  class="container pb-5" id="products-main">
+            <div id="modal">
+                    <div id="modal-content">
+                         <p>Thanks now.  Please take your money to Ed.</p>
+                         <button id="closeModal">&times</button>
+                     </div>
+                 </div>
+        <ul id="products-ul">
+
+
+        </ul>
         
     </main>
-    <!------------------------- End Coding Playground ---------------------------------------->
+  
     
     <footer id="footer" class="footer fixed-bottom text-center bg-light">
         <p class="container-fluid pt-2">Footer</p>
@@ -34,5 +44,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="../nav-factory.js"></script>
     <script src="../nav-controller.js"></script>    
+    <script src="products-controller.js"></script> 
+    <script src="products-factory.js"></script> 
+    <script src="products-ui.js"></script> 
 </body>
 </html>
