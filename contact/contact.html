@@ -5,40 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="contact.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../main-styles.css">
+    <title>Contact Us</title>
 </head>
 
 <body>
-    
-    <!-- Message form -->
-    <form id="test">
-        <input type="radio" name="messageType" value="comment" checked>Leave Commen<br>
-        <input type="radio" name="messageType" value="email">Send Email<br>
-        <input type="text" name="name" id="name" value="Full Name">
-        <input type="email" name="email" id="email" value="Email">
-        <textarea>Some text...</textarea>
-    </form>
-    <button onclick="getData();myFunction()">Click Me</button>
-    <button onclick="modal()">CHECK EMAIL</button>
-    
-    <!-- Comment output -->
-    <p id="testOutput"></p>
-    
-    <!-- Message toaster -->
-    <div id="snackbar">Thank you for your message..</div>
-    
-    <!-- Modal window for email -->
-    <div id="modal">
-        <div id="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <p id="modalTitle"></p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" id="nav">
+                
             </div>
-            <div id="modalContent"></div>
         </div>
-    </div>
+    </nav>
+    <main  class="container pb-5">
+        
+        <!--------------------Code away, Camels.  Just place the id for you javascript HTML push in the main nav below ---------------------->
+        
+        <!-- Display contact links -->
+        <div id="contactInfoLinks"></div>
+
+        <!-- Display google map location -->
+        <div id="location">
+            <h2>Find Us</h2>
+            <div id="locationDetails">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.1969860710724!2d-86.76173072251959!3d36.229922508562304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88645d5d4dbbbd1f%3A0x33708cddd52b3d81!2sPrince&#39;s+Hot+Chicken+Shack!5e0!3m2!1sen!2sus!4v1508167993905" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div id="locationDetailList">
+                    <div id="adress">
+                        <h3>Address :</h3>
+                        <p>123 Ewing Dr,<br>Nashville, TN 37207</p>
+                    </div>
+                    <div id="phone">
+                        <h3>Phone Number :</h3>
+                        <p>555.555.5555</p>
+                    </div>
+                    <div id="hours">
+                        <h3>Hours :</h3>
+                        <p>Monday - Friday : 8am - 6pm<br>
+                           Saturday : 10am - 4pm<br>
+                           Sunday : Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Message form -->
+
+        <div id="contactFormContainer">
+            <h2>Leave a comment / Send a message</h2>
+            <form id="contactForm">
+                <input type="radio" name="messageType" value="comment" checked>Leave Comment<br>
+                <input type="radio" name="messageType" value="email">Send Message<br>
+                <input type="text" name="name" id="name" value="Full Name">
+                <input type="email" name="email" id="email" value="Email">
+                <textarea>Some text...</textarea>
+            </form>
+            <button onclick="getData();myFunction()">Click Me</button>
+            <button onclick="modal()">CHECK EMAIL</button>
+            
+            <!-- Comment output -->
+            <p id="commentOutput"></p>
+            
+            <!-- Message toaster -->
+            <div id="snackbar">Thank you for your message..</div>
+            
+            <!-- Modal window for email -->
+            <div id="modal">
+                <div id="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <p id="modalTitle"></p>
+                    </div>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!------------------------- End Coding Playground ---------------------------------------->
+    </main>
     
+    <footer id="footer" class="footer fixed-bottom text-center bg-light">
+        <p class="container-fluid pt-2">Footer</p>
+    </footer>  
+
     <script src="modal.js"></script>
     <script src="contactController.js"></script>
+    <script src="contactFactory.js"></script>
+    <script src="commentController.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="../nav-factory.js"></script>
+    <script src="../nav-controller.js"></script>    
 </body>
 </html>

@@ -10,6 +10,53 @@ textarea {
     resize: none;
 }
 
+/* style for contact links */
+#contactInfoLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.contactLink {
+    padding: 0px 20px;
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contactLink img {
+    align-self: center;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.contactLink h3,
+.contactLink h4 {
+    text-align: center;
+}
+
+
+/* Style for Google Map and form Divs */
+#location,
+#contactFormContainer {
+    padding: 20px 0;
+    border-top: solid 2px lightgray;
+}
+
+#locationDetails {
+    display: flex;
+    justify-content: space-around;
+}
+
+#locationDetailList {
+    display: flex;
+    flex-direction: column;
+}
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
