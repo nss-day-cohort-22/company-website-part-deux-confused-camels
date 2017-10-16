@@ -1,3 +1,11 @@
+.about-img {
+    text-align: center;
+}
+
+.about-img > img {
+    height: 500px;
+}
+
 .employee-image {
     height: 150px;
     width: 150px;
@@ -5,10 +13,15 @@
     object-fit: cover;
 }
 
-.about-img {
-    text-align: center;
+.employee {
+    display: -webkit-flex;
+    display: flex;
+    /* flex-direction: row; */
+    margin: 10px;
 }
 
-.about-img > img {
-    height: 500px;
+.employee-name-title {
+    align-self: center;
+    padding-left: 10%;
+    width: 40%;
 }

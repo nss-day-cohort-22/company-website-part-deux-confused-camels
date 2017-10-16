@@ -25,8 +25,10 @@ for (let i = 0; i < employeeDatabase.length; i++) {
     employeeElement.innerHTML += `
     <article class="employee">
         <img src="${currentEmployee.image}" class="employee-image">
-        <h4 class="employee-name">${currentEmployee.name}</h4>
-        <h6 class="employee-title">${currentEmployee.title}</h6>
+        <div class="employee-name-title")>
+            <h4 class="employee-name">${currentEmployee.name}</h4>
+            <h6 class="employee-title">${currentEmployee.title}</h6>
+        </div>
     </article>
     `
 }
