@@ -1,3 +1,4 @@
+//ABOUT US
 //Original reason Chicken Sunglasses were created
 const original = {
     "problem": "Seeing the world through rose-colored glasses has been associated with having a positivity outlook for centuries. However, for chickens, seeing the world through rose-colored glasses has literally been life saving. Many people are unaware that chickens have a natural cannibalistic instinct, which is intensified at any sight of blood. Farmers would watch in horror, as their chickens would mercilessly peck each other to death. They were desperate to stop these mass murders but the chickens found loopholes in all of the farmers’ attempts!", 
@@ -8,7 +9,7 @@ const original = {
 const modern = {
     "problem": "However, over the last ten years, owning chickens has become a hipster trend. This has had dire consequences. After decades of being almost non-existent, the rate of chicken cannibalism began to rise again, since the hipsters weren’t able to provide the adequate spaces for multiple chickens to safely cohabitate. Hipsters were in a “fowl” mood and at a loss of what to do.",
     
-    "solution": "Thankfully, our founder remembered the rose-colored solution from over a century ago: Chicken Sunglasses! Since the founding of COMPANY-NAME in 2010, the lives of thousands of hipster chickens have been spared through our functional and fashionable Chicken Sunglasses!"
+    "solution": "Thankfully, our founder remembered the rose-colored solution from over a century ago: Chicken Sunglasses! Since 2010, COMPANY-NAME has helped spare the lives of thousands of hipster chickens through our functional and fashionable Chicken Sunglasses!"
 }
 
 //Create an array of original problem/solution and the modern problem/solution
@@ -20,29 +21,30 @@ aboutUs.push(original, modern);
 const aboutString = JSON.stringify(aboutUs);
 localStorage.setItem("about", aboutString);
 
+//EMPLOYEES
 //Objects containing employees
 const founder = {
     "name": "John",
     "title": "Founder and CEO",
-    "image": "/img/founderChicken.jpg"
+    "image": "/about/img/founderChicken.jpg"
 }
 
 const productManager = {
     "name": "Paul",
     "title": "Product Manager",
-    "image": "/img/productChicken.jpg"
+    "image": "/about/img/productChicken.jpg"
 }
 
 const socialManager = {
     "name": "Chris",
     "title": "Social Media Guru",
-    "image": "/img/socialChicken.jpg"
+    "image": "/about/img/socialChicken.jpg"
 }
 
 const outreachCoordinator = {
     "name": "Kristen",
     "title": "Outreach Coordinator",
-    "image": "/img/outreachChicken.jpg"
+    "image": "/about/img/outreachChicken.jpg"
 }
 
 //employee array
