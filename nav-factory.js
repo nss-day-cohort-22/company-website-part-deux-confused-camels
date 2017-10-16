@@ -6,17 +6,17 @@ const home = {
 
 const products = {
     'name' : 'Products',
-    'link' : "../products.html"
+    'link' : "../products/products.html"
 }
 
 const about = {
     'name' : 'About',
-    'link' : "../about.html"
+    'link' : "../about/about.html"
 }
 
 const contact = {
     'name' : 'Contact',
-    'link' : "../contact.html"
+    'link' : "../contact/contact.html"
 }
 
 
