@@ -88,8 +88,9 @@ function getData() {
     let commentObjectString = JSON.stringify(commentObjectParse)
     localStorage.setItem("commentObjectStored", commentObjectString)
     document.getElementById("contactForm").reset()
-    hideSelecter()
+    hideSelector()
 
+    //Repopulate comment section
     displayMessages("comment", "commentOutput", "null")
 }
 
@@ -104,8 +105,8 @@ function myFunction() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
-// Hide Contact Selecter
-hideSelecter = function () {
+// Hide Contact Selector
+hideSelector = function () {
     document.getElementById("selectDiv").style.display = "none"
 }
 
@@ -118,4 +119,4 @@ if (localStorage.getItem("commentObjectStored") === null) {
 
 document.getElementById("messageButton").onclick = function() {document.getElementById("selectDiv").style.display = "block"}
 
-document.getElementById("commentButton").onclick = function() {hideSelecter()}
+document.getElementById("commentButton").onclick = function() {hideSelector()}
