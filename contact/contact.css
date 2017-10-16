@@ -10,6 +10,10 @@ textarea {
     resize: none;
 }
 
+#selectDiv {
+    display: none;
+}
+
 /* style for contact links */
 #contactInfoLinks {
     display: flex;

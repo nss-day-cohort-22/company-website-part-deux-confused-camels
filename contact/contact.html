@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="contact.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> 
     <link rel="stylesheet" href="../main-styles.css">
+    <link href="contact.css" rel="stylesheet">
     <title>Contact Us</title>
 </head>
 
@@ -26,13 +26,18 @@
         <!--------------------Code away, Camels.  Just place the id for you javascript HTML push in the main nav below ---------------------->
         
         <!-- Display contact links -->
-        <div id="contactInfoLinks"></div>
+        
+        <h1>Contact Us</h1>
+        <div id="contactInfoLinks">
+        </div>
 
         <!-- Display google map location -->
         <div id="location">
             <h2>Find Us</h2>
             <div id="locationDetails">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.1969860710724!2d-86.76173072251959!3d36.229922508562304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88645d5d4dbbbd1f%3A0x33708cddd52b3d81!2sPrince&#39;s+Hot+Chicken+Shack!5e0!3m2!1sen!2sus!4v1508167993905" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <!-- Addres / Phone Number / Hours -->
                 <div id="locationDetailList">
                     <div id="adress">
                         <h3>Address :</h3>
@@ -58,13 +63,32 @@
         <div id="contactFormContainer">
             <h2>Leave a comment / Send a message</h2>
             <form id="contactForm">
-                <input type="radio" name="messageType" value="comment" checked>Leave Comment<br>
-                <input type="radio" name="messageType" value="email">Send Message<br>
+                
+                <!-- Select message / comment -->
+                <input type="radio" name="messageType" value="comment" id="commentButton" checked>Leave Comment<br>
+                <input type="radio" name="messageType" value="email" id="messageButton">Send Message
+                
+                <!-- If message - select recepient -->
+                <div id="selectDiv">
+                    <select id="select"> 
+                        <option value="null" selected>Select Contact :</option> 
+                        <option value="John" >John- Founder and CEO</option> 
+                        <option value="Paul">Paul- Product Manager</option>
+                        <option value="Chris">Chris- Social Media Guru</option>
+                        <option value="Kristen">Kristen- Outreach Coordinator</option>
+                    </select>
+                </div><br>
+
+                <!-- Sender Name / Email / Message Content -->
                 <input type="text" name="name" id="name" value="Full Name">
                 <input type="email" name="email" id="email" value="Email">
-                <textarea>Some text...</textarea>
+                <textarea id="comentContent">Some text...</textarea>
             </form>
+
+            <!-- Submit info to database and display new comment / trigger toaster-->
             <button onclick="getData();myFunction()">Click Me</button>
+
+            <!-- Admin Logon / Check Emails -->
             <button onclick="modal()">CHECK EMAIL</button>
             
             <!-- Comment output -->
@@ -79,6 +103,7 @@
                     <div class="modal-header">
                         <span class="close">&times;</span>
                         <p id="modalTitle"></p>
+                        <div class="modal-filter"></div>
                     </div>
                     <div id="modalContent"></div>
                 </div>
