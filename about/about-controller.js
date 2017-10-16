@@ -13,3 +13,19 @@ for (let i = 0; i < aboutDatabase.length; i++) {
     </article>
     `    
 }
+
+//pull employeeString from local storage
+const employeeDatabase = JSON.parse(localStorage.getItem("employeeInfo"));
+const employeeElement = document.getElementById("employee-info");
+
+for (let i = 0; i < employeeDatabase.length; i++) {
+    let currentEmployee = employeeDatabase[i];
+    
+    employeeElement.innerHTML += `
+    <article class="employee">
+        <img src="${currentEmployee.image}" class="employee-image">
+        <h3 class="employee-name">${currentEmployee.name}</h3>
+        <h4 class="employee-title">${currentEmployee.title}</h4>
+    </article>
+    `
+}

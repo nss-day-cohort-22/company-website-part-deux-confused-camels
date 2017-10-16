@@ -6,9 +6,9 @@ const original = {
 }
 //Modern reason why Chicken Sunglasses were revitalized
 const modern = {
-    "problem": "However, over the last ten years, owning chickens has become a hipster trend. This has had dire consequences. After decades of being almost non-existent, the rate of chicken cannibalism began to rise since the hipsters weren’t able to provide the adequate spaces for multiple chickens to safely cohabitate. Hipsters were in a “fowl” mood and at a loss of what to do.",
+    "problem": "However, over the last ten years, owning chickens has become a hipster trend. This has had dire consequences. After decades of being almost non-existent, the rate of chicken cannibalism began to rise again, since the hipsters weren’t able to provide the adequate spaces for multiple chickens to safely cohabitate. Hipsters were in a “fowl” mood and at a loss of what to do.",
     
-    "solution": "Thankfully, COMPANY-NAME remembered the rose-colored solution from over a century ago: Chicken Sunglasses! Since the founding of COMPANY-NAME in 2010, the lives of thousands of hipster chickens have been spared through our functional and fashionable Chicken Sunglasses!"
+    "solution": "Thankfully, our founder remembered the rose-colored solution from over a century ago: Chicken Sunglasses! Since the founding of COMPANY-NAME in 2010, the lives of thousands of hipster chickens have been spared through our functional and fashionable Chicken Sunglasses!"
 }
 
 //Create an array of original problem/solution and the modern problem/solution
@@ -19,3 +19,38 @@ aboutUs.push(original, modern);
 //stringify to local storage
 const aboutString = JSON.stringify(aboutUs);
 localStorage.setItem("about", aboutString);
+
+//Objects containing employees
+const founder = {
+    "name": "John",
+    "title": "Founder and CEO",
+    "image": "/img/founderChicken.jpg"
+}
+
+const productManager = {
+    "name": "Paul",
+    "title": "Product Manager",
+    "image": "/img/productChicken.jpg"
+}
+
+const socialManager = {
+    "name": "Chris",
+    "title": "Social Media Guru",
+    "image": "/img/socialChicken.jpg"
+}
+
+const outreachCoordinator = {
+    "name": "Kristen",
+    "title": "Outreach Coordinator",
+    "image": "/img/outreachChicken.jpg"
+}
+
+//employee array
+const employees = [];
+
+employees.push(founder, productManager, socialManager, outreachCoordinator);
+
+//stringify to local storage
+const employeeString = JSON.stringify(employees);
+localStorage.setItem("employeeInfo", employeeString);
+
