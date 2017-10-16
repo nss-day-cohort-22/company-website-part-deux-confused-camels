@@ -14,14 +14,14 @@ indexEl.innerHTML += `
   <section class="${key}">      
     <div class="img_container rounded">
        <img src="${detail.picture}" class="rounded" alt="Picture of chicken Glasses" height="600" width="900">
-       <a href="${detail.button}" class="btn btn-dark bg-warning button">Shop Chicken Shades</a>  
+       <a href="${detail.button}" class="btn btn-dark button">Shop Chicken Shades</a>  
     </div>
 <br>
        <h1>${detail.title}</h1>
        <p class=bodyWrap>${detail.body}</p>
 <br>
         <h4>A small video demonstrating the history of the chicken sunglasses:</h4>
-        <iframe class="pb-5" width="560" height="315" src="${detail.video}" frameborder="0" allowfullscreen></iframe>
+        <iframe class="pb-5" width="850" height="515" src="${detail.video}" frameborder="0" allowfullscreen></iframe>
     
             `    
         }

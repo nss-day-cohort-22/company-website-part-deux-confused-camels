@@ -4,12 +4,13 @@
     position:relative;
     display:inline-block;
     text-align:center;
-    border:5px solid #000000;
+    /* border:5px solid #000000; */
     margin: 50px;
 }
 
 .button {
     font-size: 26px;
+    background-color: #ce8059;  
     position:absolute;
     bottom:300px;
     right:530px;
