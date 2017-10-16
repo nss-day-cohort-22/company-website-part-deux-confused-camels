@@ -28,3 +28,10 @@ modal = function() {
 document.getElementsByClassName("close")[0].onclick = function() {
     document.getElementById('modal').style.display = "none";
 }
+
+deleteMessage = function (commentIndex) {
+    let commentObjectParse = JSON.parse(localStorage.getItem("commentObjectStored"))
+    commentObjectParse.splice(commentIndex, 1)
+    localStorage.setItem("commentObjectStored", JSON.stringify(commentObjectParse))
+    displayMessages("email", "modalContent")
+}

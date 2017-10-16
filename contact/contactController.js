@@ -1,11 +1,12 @@
 // Assign variables
 
-let commentElement = document.getElementById("testOutput")
 let testArray=[]
 let newComment = {}
 
 // Display Comments or Emails
 function displayMessages(type, displayElement) {
+    document.getElementById(displayElement).innerHTML = ""
+
     let commentObjectParse = JSON.parse(localStorage.getItem("commentObjectStored"))
     
     //check messageType and display filter out comments / emails
@@ -22,6 +23,7 @@ function displayMessages(type, displayElement) {
             if (type === "email") {
                 document.getElementById(displayElement).innerHTML += `
                 <div><a href="mailto:${element.email}?Subject=Response%20To%20Your%20Email" target="_top">${element.email}</a></div>
+                <button onclick="deleteMessage(${index})">Delete Message</button>
                 `
             }
 
@@ -36,8 +38,6 @@ function displayMessages(type, displayElement) {
 
 // Add new coment from form and add it localStorage 
 function getData() {
-    
-    commentElement.innerHTML = ""
     
     let w = document.querySelector('input[name="messageType"]:checked').value
     let x = document.getElementById("test").elements[2].value;
