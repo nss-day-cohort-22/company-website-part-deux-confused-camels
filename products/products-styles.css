@@ -2,18 +2,24 @@
     display: none;
     position: fixed;
     z-index: 1; 
-    width: 40%; 
+    width: 60%; 
     height: 40%; 
     overflow: auto; 
-    background-color: grey;
+    background-color: #d78258;
     padding: 2em;
     border-radius: 25px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 10px 10px 5px #a9916b;
     top: 100px;
 }
 
-#modal-content {
+#modal-content, #modal-content p {
     color: black;
+    text-align: center;
+}
+
+#modal-content form {
+    margin-bottom: 1em;
+    align-self: center;
 }
 
 .product-img {
@@ -32,7 +38,11 @@
 }
 
 #closeModal {
-    text-align: right;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ccdcc1;
+    width: 50%;
+    align-self: center;
 }
 
 .products-li p, select {
