@@ -65,6 +65,7 @@ h1 {
 #contactFormContainer {
     padding: 20px 0;
     border-top: solid 2px lightgray;
+    color: #778979;
 }
 
 #locationDetails {
@@ -91,11 +92,33 @@ textarea {
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #778979;
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+    margin-top: 10px;
+    color: #778979;
+}
+input {
+    color: #778979;
+    border-radius: 4px;
+    border: 2px solid #778979;
+    background-color: #f8f8f8;
+}
+.contactComment {
+    margin: 10px;
+    padding : 20px 20px 5px;
+    border-radius : 10px;
+    border: solid 2px #778979;
+}
+
+#commentOutput {
+    padding-top: 10px;
+}
+
+.commentdate p {
+    margin: 0;
 }
 
 
@@ -155,11 +178,12 @@ However, delay the fade out process for 2.5 seconds */
     height: 500px;
     z-index: 1;
     overflow: auto;
-    background-color: lightgray;
+    background-color: white;
     box-shadow: 20px 20px 20px rgba(25,25,25,.50);
     border-radius: 5px;
     top: 100px;
     left: 10%;
+    border: solid 2px #778979;
 }
 
 #modal-content {
@@ -169,8 +193,19 @@ However, delay the fade out process for 2.5 seconds */
     animation-duration: 1.5s
 }
 
+#modalContent {
+    margin: 20px;
+}
+
+#modalContent button {
+    margin-top: 20px;
+    background-color: #778979;
+    color: white; 
+}
+    
+
 #modalContent p {
-    margin: 30px auto;
+    /* margin: 30px auto; */
     display: block;
     width: 80%;
     text-align: justify;
@@ -203,11 +238,23 @@ However, delay the fade out process for 2.5 seconds */
 .modal-header,
 #modalAuthor {
     padding: 2px 16px;
-    background-color: gray;
+    background-color: #778979;
     color: white;
 }
 
 #modalTitle {
     font-size: 1.5em;
     text-align: center;
+}
+
+#formButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+#formButton button {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    color: #778979;
+    border: solid 2px #778979;
 }

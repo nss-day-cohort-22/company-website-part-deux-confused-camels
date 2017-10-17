@@ -65,8 +65,8 @@
             <form id="contactForm">
                 
                 <!-- Select message / comment -->
-                <input type="radio" name="messageType" value="comment" id="commentButton" checked>Leave Comment<br>
-                <input type="radio" name="messageType" value="email" id="messageButton">Send Message
+                <input type="radio" name="messageType" value="comment" id="commentButton" checked> Leave Comment<br>
+                <input type="radio" name="messageType" value="email" id="messageButton"> Send Message
                 
                 <!-- If message - select recepient -->
                 <div id="selectDiv">
@@ -85,11 +85,13 @@
                 <textarea id="comentContent">Some text...</textarea>
             </form>
 
-            <!-- Submit info to database and display new comment / trigger toaster-->
-            <button onclick="getData();myFunction()">Click Me</button>
+            <div id="formButton">
+                <!-- Submit info to database and display new comment / trigger toaster-->
+                <button onclick="getData();myFunction()">Click Me</button>
 
-            <!-- Admin Logon / Check Emails -->
-            <button onclick="modal()">CHECK EMAIL</button>
+                <!-- Admin Logon / Check Emails -->
+                <button onclick="modal()">CHECK EMAIL</button>
+            </div>
             
             <!-- Comment output -->
             <p id="commentOutput"></p>

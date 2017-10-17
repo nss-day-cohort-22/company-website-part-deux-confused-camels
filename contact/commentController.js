@@ -6,25 +6,30 @@ let newComment = {}
 // Display Comments or Emails
 
 function displayMessages(type, displayElement, recepient) {
-    document.getElementById(displayElement).innerHTML = ""
-
     let commentObjectParse = JSON.parse(localStorage.getItem("commentObjectStored"))
+    
+    document.getElementById(displayElement).innerHTML = ""
     
     //check messageType and display filter out comments / emails
     for (let index = 0; (index < commentObjectParse.length) && (index < 10); index++) {
         let element = commentObjectParse[index];
-        let docDisplay = document.getElementById(displayElement)
+        let commentID = element.date.replace(/ /g, "")
 
-        docDisplay.innerHTML +=`<div>`
 
+        
         //Display messages by type - email / comment
         if((element.messageType === "comment") || (element.messageType === "email") && (recepient === "null")) {
-        
+            
+            
             if (element.messageType === type) {
+                document.getElementById(displayElement).innerHTML += `<div class="contactComment" id="${commentID}"></div>`
+        
+                let docDisplay = document.getElementById(commentID)
+                
                 docDisplay.innerHTML += `
-                <div>${element.name}:</div>
-                <div>${element.comment}</div>
-                <div>${element.date}</div>
+                <div class="commentName"><h2>${element.name} :</h2></div>
+                <div class="commentContent"><h4>${element.comment}</h4></div>
+                <div class="commentdate"><p>${element.date}</p></div>
                 `
                 //If email, display a mailTo link
                 if (type === "email") {
@@ -33,12 +38,17 @@ function displayMessages(type, displayElement, recepient) {
                     <button onclick="deleteMessage(${index})">Delete Message</button>
                     `
                 }
-
+                
                 document.getElementById(displayElement).innerHTML += `<br></div>`
             }
         } else {
             
             if (element.messageType === type && element.contact === recepient) {
+
+                document.getElementById(displayElement).innerHTML += `<div class="contactComment" id="${commentID}"></div>`
+    
+                let docDisplay = document.getElementById(commentID)
+                
                 docDisplay.innerHTML += `
                 <div>${element.name}:</div>
                 <div>${element.comment}</div>
