@@ -1,0 +1,28 @@
+#modal {
+    display: none; 
+    z-index: 1; 
+    width: 40%; 
+    height: 40%; 
+    overflow: auto; 
+    background-color: grey;
+    padding: 2em;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px black;
+}
+
+#modal-content {
+    color: black;
+}
+
+.product-img {
+    height: 100px;
+    width: 100px;
+}
+
+#products-ul {
+    list-style-type: none;
+}
+
+#closeModal {
+    text-align: right;
+}

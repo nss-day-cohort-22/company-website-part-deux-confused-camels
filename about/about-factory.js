@@ -9,7 +9,7 @@ const original = {
 const modern = {
     "problem": "However, over the last ten years, owning chickens has become a hipster trend. This has had dire consequences. After decades of being almost non-existent, the rate of chicken cannibalism began to rise again, since the hipsters weren’t able to provide the adequate spaces for multiple chickens to safely cohabitate. Hipsters were in a “fowl” mood and at a loss of what to do.",
     
-    "solution": "Thankfully, our founder was familiar with the rose-colored solution from over a century ago: Chicken Sunglasses! Since 2010, COMPANY-NAME has helped spare the lives of thousands of hipster chickens through our functional and fashionable Chicken Sunglasses!"
+    "solution": "Thankfully, our founder was familiar with the rose-colored solution from over a century ago: Chicken Sunglasses! Since 2010, Camels Chicken Sunglasses has helped spare the lives of thousands of hipster chickens through our functional and fashionable Chicken Sunglasses! You may be asking yourself what camels have to do with chickens. Well our name actually comes from the acronym for <b>C</b>hickens <b>A</b>voiding <b>M</b>urder with <b>E</b>yesight <b>L</b>imiting <b>S</b>unglasses! So if you've decide to follow the hipster trend of owning chickens, help us keep the rate of chicken cannibalism down with Camels Chicken Sunglasses."
 }
 
 //Create an array of original problem/solution and the modern problem/solution
