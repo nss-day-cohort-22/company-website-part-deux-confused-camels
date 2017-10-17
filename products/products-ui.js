@@ -73,7 +73,7 @@ function drawList() {
         for (var s = 1; s <= currentObject.select; s++) {
             stockSelectOptions += `<option value="${s}">${s}</option>`;
         }
-
+        
         document.getElementById("products-ul").innerHTML += `
         <li class="products-li d-flex flex-row pt-3 pb-3">
             <img class="product-img" src="${currentObject.image}" alt="${currentObject.name}">
@@ -83,7 +83,7 @@ function drawList() {
                 <p class="product-description">${"Description: " + currentObject.description}</p>
                 <p class="product-stock">${"Current Stock: " + currentObject.stock}</p>
                 <select class="stock-select" id="${currentObject.name.replace(/ /g, "") + "Select"}" name="stock-select">${stockSelectOptions}</select>
-                <button class="buy" id="${currentObject.name.replace(/ /g, "")}" onclick="displayModal()">Buy Now</button>
+                <button class="buy" id="${currentObject.name.replace(/ /g, "")}" onclick="productModal(2, 3)">Buy Now</button>
             </div>
         </li>
         `
@@ -100,7 +100,9 @@ function check() {
     document.getElementById("previous").hidden = currentPage === 1 ? true : false;
 }
 
-function displayModal() {
+function productModal(a, b) {
+    let priceYouPay = parseInt(a) * parseInt(b);
+    document.getElementById("orderTotal").innerHTML = priceYouPay;
     document.getElementById("modal").style.display = "block"
 }
 
