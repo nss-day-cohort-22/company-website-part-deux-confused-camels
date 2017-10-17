@@ -1,15 +1,8 @@
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    text-shadow: 1px 1px 5px rgba(25,25,25,.1);
 }
-
 #selectDiv {
     display: none;
 }
@@ -18,30 +11,53 @@ textarea {
 #contactInfoLinks {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .contactLink {
-    padding: 0px 20px;
+    width : 15%;
     display: inline-flex;
     flex-direction: column;
-    flex: 1;
+}
+
+.contactLink a {
+    text-decoration: none;
+}
+
+.contactLink a:hover {
+    color: #d78258;
 }
 
 .contactLink img {
     align-self: center;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     border-radius: 50%;
-    background-color: lightgray;
+    background-color: #778979;
 }
 
 .contactLink h3,
-.contactLink h4 {
+.contactLink a,
+.contactLink h4 
+{
     text-align: center;
+    font-family: "Martel Sans";
+    color: #778979;
 }
+
+.contactLink h3 {
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+.contactLink h4 {
+    padding-top: -50px;
+    font-size: 1em;
+}
+
+
 
 
 /* Style for Google Map and form Divs */
@@ -59,7 +75,29 @@ textarea {
 #locationDetailList {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
+
+#locationDetailList h3 {
+    color: #d78258;
+}
+
+#contactFormContainer {
+    width: 90%;
+    margin: auto;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
