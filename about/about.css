@@ -40,6 +40,7 @@ b {
     
 }
 
+
 /* formatting for employee name and title */
 .employee {
     margin: 30px;
@@ -47,6 +48,10 @@ b {
     width: 150px;
     color: #a9916b;
     font-family: "Martel Sans", sans-serif;
+}
+
+.employee:hover {
+    transform: scale(1.2);
 }
 
 .employee-title {
