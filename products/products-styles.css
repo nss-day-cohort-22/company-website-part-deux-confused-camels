@@ -15,8 +15,14 @@
 }
 
 .product-img {
-    height: 100px;
-    width: 100px;
+    height: 17em;
+    width: 17em;
+    object-fit: cover;
+    margin-right: 1.5em;
+    align-self: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: lightgray;
 }
 
 #products-ul {
@@ -25,4 +31,33 @@
 
 #closeModal {
     text-align: right;
+}
+
+.products-li p, select {
+    margin-bottom: 1em;    
+}
+
+.side-content p, select {
+    margin-bottom: .5em;
+}
+
+.product-name {
+    color: #d78258;
+    font-family: "Martel Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: .01em solid #d78258;
+}
+
+.buy {
+    background-color: #d78258;
+    font-family: "Martel", serif;
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-radius: 20px;
+}
+
+.stock-select {
+    border-radius: 20px;
 }
