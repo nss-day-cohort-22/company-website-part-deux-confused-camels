@@ -4,7 +4,7 @@ const productsHTML = document.getElementById("products-ul");
 
 for (let array in retrievedProductsDB) {
     let currentArray = retrievedProductsDB[array];
-    for (let i = 0; i < currentArray.length; i++) {
+    for (let i = 0; i < 4; i++) {
         let currentObject = currentArray[i];
         let stockSelectOptions = ``;
         for (var s = 1; s <= currentObject.select; s++) {
