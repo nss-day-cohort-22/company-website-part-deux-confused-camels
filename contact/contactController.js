@@ -11,7 +11,7 @@ for (var index = 0; index < contactInfoDatabaseParse.length; index++) {
     <div class="contactLink">
         <img src="${element.logo}">
         <h3>${element.name}</h3>
-        <h4><a href="${element.location}">${element.tag}</a></h4>
+        <h4><a href="${element.location}" target="_blank">${element.tag}</a></h4>
     </div>
     `
 }
