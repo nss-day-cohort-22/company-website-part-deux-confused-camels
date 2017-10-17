@@ -22,18 +22,28 @@
     </nav>
 
     <main  class="container pb-5" id="products-main">
-            <div id="modal" class="container-fluid">
-                    <div id="modal-content">
-                         <p>Thanks for your order.  Your total is $<span id="orderTotal"></span>.  Please take your money to the good Waffle House in McMinnville and ask for Ed.</p>
-                         <form action="#" method="#">Type your name here so we can tell him who's coming, thank you kindly:<input type="Name" name="Name" size="25"></form>
-                         <button id="closeModal">Send</button>
-                     </div>
-                 </div>
         <ul id="products-ul" class="d-flex flex-column">
-
-
+            
+            
         </ul>
-         
+        
+        <input type="button" id="previous" onclick="previousPage()" value="previous" />
+        
+        <input type="button" class ="paginatorPageNumber" id="1" onclick="pageJump(1)" value="1" />
+        <input type="button" class ="paginatorPageNumber" id="2" onclick="pageJump(2)" value="2" />
+        <input type="button" class ="paginatorPageNumber" id="3" onclick="pageJump(3)" value="3" />
+        <input type="button" class ="paginatorPageNumber" id="4" onclick="pageJump(4)" value="4" />
+        <input type="button" class ="paginatorPageNumber" id="5" onclick="pageJump(5)" value="5" />
+        
+        <input type="button" id="next" onclick="nextPage()" value="next" />
+        
+        <div id="modal" class="container-fluid">
+            <div id="modal-content">
+                    <p>Thanks for your order.  Your total is $<span id="orderTotal"></span>.  Please take your money to the good Waffle House in McMinnville and ask for Ed.</p>
+                    <form action="#" method="#">Type your name here so we can tell him who's coming, thank you kindly:<input type="Name" name="Name" size="25"></form>
+                    <button id="closeModal">Send</button>
+            </div>
+        </div>
     </main>
   
     
