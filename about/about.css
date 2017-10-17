@@ -50,11 +50,12 @@ b {
     font-family: "Martel Sans", sans-serif;
 }
 
-.employee:hover {
-    transform: scale(1.2);
-}
-
 .employee-title {
     font-family: "Martel", serif;
     color: #778979;
+}
+
+/* enlarge employee when hover over */
+.employee:hover {
+    transform: scale(1.2);
 }
