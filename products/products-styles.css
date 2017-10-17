@@ -74,7 +74,32 @@
     border-radius: 20px;
 }
 
-.pagination {
+
+#pagination-bar {
+    background: #fbf8f7;
+    padding: 20px;
+    margin-bottom: 200px;
+    margin-left: 45%;
+}
+
+.page {
+    display: inline-block;
+    padding: 0px 9px;
+    margin-right: 4px;
+    border-radius: 5px;
+    border: solid 3px #919191;
+    background: #e9e9e9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.buttstyle {
+    padding: 15px;  
+    color: black;
+
+}
+
+/* .pagination {
     display: inline-block;
 }
 
@@ -85,10 +110,10 @@
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
-}
-
+} */
+/* 
 .pagination a.active {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
-}
+} */
