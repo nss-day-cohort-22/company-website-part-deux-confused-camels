@@ -1,31 +1,61 @@
+/*Formatting for main image*/
 .about-img {
     text-align: center;
 }
 
 .about-img > img {
     height: 500px;
+    box-shadow: 5px 5px 15px #a9916b;
+    margin-top: 20px;
 }
 
+/* center headers for each section */
 h1 {
     text-align: center;
+    margin-top: 1rem;
 }
 
+/* makes the CAMELS acronym standout */
+b {
+    color: #d78258;
+    font-size: 1.1rem;
+}
+
+/* Formatting for employee section */
 #employee-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* employee images are circular with a border */
 .employee-image {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
-    padding: 10px;
+    border: 5px solid #ccdcc1;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 15px #a9916b;
+    
 }
 
+
+/* formatting for employee name and title */
 .employee {
     margin: 30px;
     text-align: center;
     width: 150px;
+    color: #a9916b;
+    font-family: "Martel Sans", sans-serif;
+}
+
+.employee-title {
+    font-family: "Martel", serif;
+    color: #778979;
+}
+
+/* enlarge employee when hover over */
+.employee:hover {
+    transform: scale(1.2);
 }
