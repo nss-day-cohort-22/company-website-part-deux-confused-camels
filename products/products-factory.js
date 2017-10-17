@@ -132,35 +132,35 @@ const productsDBArray = [
         select: 20
     },
     {
-        name: "The Drug Lord | Dark",
-        description: "Say hello to my little friend.",
+        name: "The Tom Selleck | Razzle Red",
+        description: "For the chicken that has that Magnum swagger.",
         price: "5",
-        image: "./images/drugLord.jpg",
+        image: "./images/happy-chicken.jpg",
         stock: 20,
         select: 20
     },
 
     {
-        name: "The Matrix | Reflective",
-        description: "There is no spoon but we do have sporks.",
+        name: "The Lady Gaga | Razzle Red",
+        description: "Hide that poker face behind these stylish anti-canabalism shades.",
         price: "7",
-        image: "./images/theMatrix.jpg",
+        image: "./images/gaga.jpg",
         stock: 20,
         select: 20
     },
     {
-        name: "The Morpheus | Ridiculous",
-        description: "No body makes the first chicken jump",
+        name: "The Elton | Razzle Red",
+        description: "Say goodbye to the Yellow Brick road AND devoured hatchlings!",
         price: "10",
-        image: "./images/theMorpheus.jpg",
+        image: "./images/elton.jpg",
         stock: 20,
         select: 20
     },
     {
-        name: "The Rich Guys | Expensive Black",
-        description: "When you can afford the whole bucket.",
-        price: "20",
-        image: "./images/theRichGuys.jpg",
+        name: "The Dazed and Confused | Razzle Red",
+        description: "You might have the munchies, but not for your spawn!",
+        price: "6",
+        image: "./images/dazed.jpg",
         stock: 20,
         select: 20
     }
