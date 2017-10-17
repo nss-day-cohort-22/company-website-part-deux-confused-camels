@@ -4,23 +4,25 @@
     position:relative;
     display:inline-block;
     text-align:center;
-    /* border:5px solid #000000; */
     margin: 50px;
+    /* border:5px solid #000000; */   
 }
 
 .button {
     font-size: 26px;
-    background-color: #ce8059;  
+    background-color: #d78258;  
     position:absolute;
     bottom:300px;
     right:530px;
     width:300px;
     height:50px;
+
 }
 
 .bodyWrap {
     width: 100%;
-
+    text-align: justify;
+    color: #778979;
 }
 
 
