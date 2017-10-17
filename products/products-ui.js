@@ -1,14 +1,7 @@
 let buttons = document.getElementsByClassName("buy");
 let modalToChange = document.getElementById("modal");
 let closeButton = document.getElementById("closeModal");
-
-
-// $("button").click(function(){
-//     const updateProductsDB = JSON.parse(localStorage.getItem("productsBrowserDB"));
-//     let currentButton = $(this).val("id");
-//     console.log(currentButton);
-//     $("#modal").css("display", "block");
-// });
+let orderCost = document.getElementById("orderTotal");
 
 
 for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variable above - loop through all buttons with class "buy"
@@ -24,20 +17,27 @@ for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variabl
         
         for (var j = 0; j < currentArray.length; j++) {
            
-            var productObject = currentArray[j]; 
+            var productObject = currentArray[j]; //object containing the product 
             
             if (buttonClicked === productObject.name) { //if the id of the clicked button matches the name of section it is in (see controller) execute functions
-                let newSelectOptions = ``;
-                newStock = productObject.stock;
+                let newStock = productObject.stock;
                 newStock -= howMany; //subtract select box selection from stock of the product object
-                productObject.stock = newStock;
+                productObject.stock = newStock; //updates the value to be sent back to DB
                 changedStock.innerHTML = newStock; //update stock on the page
-                for (let k = 1; k <= newStock.length; k++) {
+                let newSelect = productObject.select; //old number of select options to be updated
+                newSelect -= howMany; //update by subtracting selected amount            
+                productObject.select = newSelect; //update data to be sent back to DB
+                let newSelectOptions = ``;//create a variable to hold the newly created select options
+                for (let k = 1; k <= newSelect; k++) {//create the new select options based on the stock left
                     newSelectOptions += `<option value="${k}">${k}</option>`;
                 }
-                newSelectBox.innerHTML = newSelectOptions;
+                newSelectBox.innerHTML = newSelectOptions;//write the new select options to the DOM
+                let currentPrice = productObject.price;//pull price of selected product
+                let priceYouPay = currentPrice *  howMany;//multiply by how many were selected
+                orderCost.innerHTML = priceYouPay;//writes price to message in modal
                 const newData = JSON.stringify(updateProductsDB)
                 localStorage.setItem("productsBrowserDB", newData);
+                document.getElementById("modal").style.display = "block";
             }
         }   
         }
@@ -46,6 +46,6 @@ for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variabl
 }    
  
 
-// closeButton.onclick = function() {
-//     modalToChange.style.display = "none";
-// }
+closeButton.onclick = function() {
+    modalToChange.style.display = "none";
+}
