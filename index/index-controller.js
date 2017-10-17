@@ -21,7 +21,7 @@ indexEl.innerHTML += `
        <p class=bodyWrap>${detail.body}</p>
 <br>
         <h4>A small video demonstrating the history of the chicken sunglasses:</h4>
-        <iframe class="pb-5" width="850" height="515" src="${detail.video}" frameborder="0" allowfullscreen></iframe>
+        <iframe class="pb-5" width="680" height="450" src="${detail.video}" frameborder="0" allowfullscreen></iframe>
     
             `    
         }
