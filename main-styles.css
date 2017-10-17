@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Martel');
+@import url('https://fonts.googleapis.com/css?family=Martel+Sans');
+
+.bg-light {
+    background-color: #d78258!important;
+}
+.navbar, footer, h1 {
+    font-family: "Martel Sans", sans-serif;
+}
+
+.navbar, footer{
+    box-shadow: 0 0px 25px #a9916b;
+}
+
+h1 {
+    color: #d78258;
+}
+
+p {
+    font-family: "Martel", serif;
+    color: #778979;
+    text-align: justify;
+
+}
+
+footer {
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    padding : 10px;
+}
+
+footer p {
+    color: rgba(0,0,0,.5);
+    margin-top: 8px;
+    text-align: left;
+}
