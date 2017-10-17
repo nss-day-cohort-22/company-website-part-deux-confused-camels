@@ -4,7 +4,8 @@ const productsDBArray = [
         description: "Test",
         price: "test",
         image: "./images/happy-chicken.jpg",
-        stock: 20
+        stock: 20,
+        select: 20
     }
 
 ]
