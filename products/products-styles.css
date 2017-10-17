@@ -1,17 +1,17 @@
 #modal {
     display: none; 
-    position: fixed;
     z-index: 1; 
-    left: 0;
-    top: 0;
     width: 40%; 
     height: 40%; 
     overflow: auto; 
-    background-color: yellow;
+    background-color: grey;
+    padding: 2em;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px black;
 }
 
 #modal-content {
-    color: white;
+    color: black;
 }
 
 .product-img {
@@ -21,4 +21,8 @@
 
 #products-ul {
     list-style-type: none;
+}
+
+#closeModal {
+    text-align: right;
 }

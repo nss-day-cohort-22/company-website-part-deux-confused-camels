@@ -1,14 +1,7 @@
 let buttons = document.getElementsByClassName("buy");
 let modalToChange = document.getElementById("modal");
 let closeButton = document.getElementById("closeModal");
-
-
-// $("button").click(function(){
-//     const updateProductsDB = JSON.parse(localStorage.getItem("productsBrowserDB"));
-//     let currentButton = $(this).val("id");
-//     console.log(currentButton);
-//     $("#modal").css("display", "block");
-// });
+let orderCost = document.getElementById("orderTotal");
 
 
 for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variable above - loop through all buttons with class "buy"
@@ -17,7 +10,6 @@ for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variabl
         let buttonClicked = this.id; //specific id of the clicked button is stored 
         let howMany = this.previousElementSibling.value; //get the value of the select box option selected for the clicked button
         let newSelectBox = this.previousElementSibling; //target the select box to adjust it's html
-        console.log(newSelectBox);
         let changedStock = this.previousElementSibling.previousElementSibling; //target the stock section to adjust the html
         const updateProductsDB = JSON.parse(localStorage.getItem("productsBrowserDB")); //gets the products db from browser storage
         for (let p in updateProductsDB) {//go through the object of products from browser storage
@@ -36,12 +28,16 @@ for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variabl
                 newSelect -= howMany; //update by subtracting selected amount            
                 productObject.select = newSelect; //update data to be sent back to DB
                 let newSelectOptions = ``;//create a variable to hold the newly created select options
-                for (let k = 1; k <= newSelect; k++) {
+                for (let k = 1; k <= newSelect; k++) {//create the new select options based on the stock left
                     newSelectOptions += `<option value="${k}">${k}</option>`;
                 }
-                newSelectBox.innerHTML = newSelectOptions;
+                newSelectBox.innerHTML = newSelectOptions;//write the new select options to the DOM
+                let currentPrice = productObject.price;//pull price of selected product
+                let priceYouPay = currentPrice *  howMany;//multiply by how many were selected
+                orderCost.innerHTML = priceYouPay;//writes price to message in modal
                 const newData = JSON.stringify(updateProductsDB)
                 localStorage.setItem("productsBrowserDB", newData);
+                document.getElementById("modal").style.display = "block";
             }
         }   
         }
@@ -50,6 +46,6 @@ for (let i = 0; i < buttons.length; i++) {//array is returned in buttons variabl
 }    
  
 
-// closeButton.onclick = function() {
-//     modalToChange.style.display = "none";
-// }
+closeButton.onclick = function() {
+    modalToChange.style.display = "none";
+}
