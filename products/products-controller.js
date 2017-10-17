@@ -25,3 +25,4 @@ for (let array in retrievedProductsDB) {
         `  
     }
 }
+
