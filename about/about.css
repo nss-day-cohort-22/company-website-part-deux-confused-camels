@@ -1,3 +1,4 @@
+/*Formatting for main image*/
 .about-img {
     text-align: center;
 }
@@ -10,22 +11,39 @@ h1 {
     text-align: center;
 }
 
+p {
+    text-align: justify;
+}
+
+/* makes the acronym standout */
+b {
+    color: #d78258;
+}
+
+/* Formatting for Employees */
 #employee-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/* images are circular with a border */
 .employee-image {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
-    padding: 10px;
+    border: 5px solid #ccdcc1;
+    
 }
 
 .employee {
     margin: 30px;
     text-align: center;
     width: 150px;
+    color: #a9916b;    
 }
+
+.employee-title {
+    color: #778979;
+}
+
