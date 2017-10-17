@@ -4,10 +4,23 @@
 .bg-light {
     background-color: #d78258!important;
 }
+.navbar, footer, h1 {
+    font-family: "Martel Sans", sans-serif;
+}
 
-.navbar, footer {
-    font-family: "Martel Sans";
+.navbar, footer{
     box-shadow: 0 0px 25px #a9916b;
+}
+
+h1 {
+    color: #d78258;
+}
+
+p {
+    font-family: "Martel", serif;
+    color: #778979;
+    text-align: justify;
+
 }
 
 footer {
