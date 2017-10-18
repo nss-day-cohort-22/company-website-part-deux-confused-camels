@@ -107,7 +107,7 @@ input {
     background-color: #f8f8f8;
 }
 .contactComment {
-    margin: 10px;
+    margin-top: 10px;
     padding : 20px 20px 5px;
     border-radius : 10px;
     border: solid 2px #778979;
@@ -121,13 +121,20 @@ input {
     margin: 0;
 }
 
+.modal-header {
+    display: block;
+}
+
+.modal-header div {
+    margin-bottom: 20px;
+}
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
+    background-color: #778979; /* Black background color */
     color: #fff; /* White text color */
     text-align: center; /* Centered text */
     border-radius: 2px; /* Rounded borders */
@@ -136,6 +143,7 @@ input {
     z-index: 1; /* Add a z-index if needed */
     left: 50%; /* Center the snackbar */
     bottom: 100px; /* 30px from the bottom */
+    font-family: "Martel Sans";
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -244,7 +252,8 @@ However, delay the fade out process for 2.5 seconds */
 
 #modalTitle {
     font-size: 1.5em;
-    text-align: center;
+    text-align: left;
+    color: white;
 }
 
 #formButton {
@@ -257,4 +266,8 @@ However, delay the fade out process for 2.5 seconds */
     border-radius: 5px;
     color: #778979;
     border: solid 2px #778979;
+}
+
+#formButton button:hover {
+    color: #d78258;
 }

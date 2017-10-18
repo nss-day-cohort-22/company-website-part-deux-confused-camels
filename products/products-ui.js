@@ -95,9 +95,9 @@ function drawList() {
 function check() {
 
 //if current page is equal to 1, then set value of hidden on the previous button to true, if not set it to false
-    document.getElementById("next").hidden = currentPage === numberOfPages ? true : false;
+    document.getElementById("next").disabled = currentPage === numberOfPages ? true : false;
  //if current page is the last page, then set the value of hidden on the next button to true, if not, set it to false
-    document.getElementById("previous").hidden = currentPage === 1 ? true : false;
+    document.getElementById("previous").disabled = currentPage === 1 ? true : false;
 }
 
 function productModal() {

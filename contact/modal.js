@@ -1,7 +1,35 @@
+const userPasswordDatabase = [
+    {
+    "userNamer": "camiller",
+    "password": "password1"
+    },
+    {
+    "userNamer": "odn86",
+    "password": "password2"
+    },
+    {
+    "userNamer": "krnorris65",
+    "password": "password3"
+    },
+    {
+    "userNamer": "tynesellis",
+    "password": "password4"
+    }
+]
 
+let loginVerified = false
 //Login Validation and Message Display
 login = function() {
-    if (document.getElementById("adminLogin").elements[0].value === "camiller" && document.getElementById("adminLogin").elements[1].value === "password") {
+
+    for (let index = 0; index < userPasswordDatabase.length; index++) {
+        let object = userPasswordDatabase[index]
+        if (document.getElementById("adminLogin").elements[0].value === object.userNamer && document.getElementById("adminLogin").elements[1].value === object.password) {
+            loginVerified = true
+            break
+        }
+    }
+
+    if (loginVerified) {
         document.getElementById("modalTitle").innerHTML = "Emails"
         document.getElementById("modalContent").innerHTML = ""
         document.getElementsByClassName("modal-filter")[0].innerHTML = `
@@ -50,7 +78,7 @@ deleteMessage = function (commentIndex) {
     let commentObjectParse = JSON.parse(localStorage.getItem("commentObjectStored"))
     commentObjectParse.splice(commentIndex, 1)
     localStorage.setItem("commentObjectStored", JSON.stringify(commentObjectParse))
-    displayMessages("email", "modalContent", "null")
+    displayMessages("email", "modalContent", document.getElementById("recepientSelector").value)
 }
 
 
