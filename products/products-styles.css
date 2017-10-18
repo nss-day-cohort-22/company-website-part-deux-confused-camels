@@ -112,9 +112,9 @@
 }
 #previous:disabled,
 #next:disabled {
-    color: white;
-    background-color: #ccdcc1;
-    /* border: none; */
+    color: #fbf8f7;
+    background-color: #fbf8f7;
+    border: none;
 }
 .paginatorPageNumber:disabled {
     background-color: #ccdcc1;
