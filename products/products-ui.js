@@ -76,7 +76,9 @@ function drawList() {
         
         document.getElementById("products-ul").innerHTML += `
         <li class="products-li d-flex flex-row pt-3 pb-3">
+            <div>    
             <img class="product-img" src="${currentObject.image}" alt="${currentObject.name}">
+            </div>
             <div class="side-content d-flex flex-column pt-3 container-fluid">
                 <p class="product-name">${"Line: " + currentObject.name}</p>
                 <p class="product-price">${"Price: $" + currentObject.price}</p>
