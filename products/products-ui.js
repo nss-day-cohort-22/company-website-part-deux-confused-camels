@@ -84,6 +84,7 @@ function drawList() {
                 <p class="product-price">${"Price: $" + currentObject.price}</p>
                 <p class="product-description">${"Description: " + currentObject.description}</p>
                 <p class="product-stock">${"Current Stock: " + currentObject.stock}</p>
+                <label class="product-select-label" for="#${currentObject.name.replace(/ /g, "")}">How many you want?</label>                
                 <select class="stock-select" id="${currentObject.name.replace(/ /g, "") + "Select"}" name="stock-select">${stockSelectOptions}</select>
                 <button class="buy" id="${currentObject.name.replace(/ /g, "")}" onclick="productModal()">Buy Now</button>
             </div>
