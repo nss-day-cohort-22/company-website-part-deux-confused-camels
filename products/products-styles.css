@@ -13,6 +13,11 @@
     right: 300px;
 }
 
+.product-select-label {
+    font-family: "Martel", serif;
+    color: #778979;
+}
+
 #modal-content, #modal-content p {
     color: black;
     text-align: center;
